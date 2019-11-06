@@ -9,12 +9,15 @@
 
 
     <bean id="musicBean"
-          class="com.mkozachuk.spring.ClassicMusic">
+          class="com.mkozachuk.spring.RockMusic">
     </bean>
 
     <bean id ="musicPlayer"
             class = "com.mkozachuk.spring.MusicPlayer">
             <constructor-arg ref="musicBean"/>
+        
+        <property name="playerName" value="Winamp Reborn" />
+        <property name="volume" value="70"/>
     </bean>
 
 </beans>

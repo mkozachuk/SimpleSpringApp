@@ -10,6 +10,9 @@ public class MainSpring {
 
         musicPlayer.playMusic();
 
+        System.out.println("Player name: " + musicPlayer.getPlayerName());
+        System.out.println("Volume: " + musicPlayer.getVolume());
+
         context.close();
     }
 }
