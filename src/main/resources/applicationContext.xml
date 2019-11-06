@@ -11,7 +11,11 @@
 
 
     <bean id="musicClassicBean"
-          class="com.mkozachuk.spring.ClassicMusic">
+          class="com.mkozachuk.spring.ClassicMusic"
+          init-method="initMethod"
+          destroy-method="destroyMethod"
+          factory-method="factoryMethod">
+
     </bean>
 
     <bean id="musicRockBean"
