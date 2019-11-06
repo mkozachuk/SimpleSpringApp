@@ -8,7 +8,7 @@ public class MainSpring {
 
         MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
 
-        musicPlayer.playMusic();
+        musicPlayer.playMusicList();
 
         System.out.println("Player name: " + musicPlayer.getPlayerName());
         System.out.println("Volume: " + musicPlayer.getVolume());
