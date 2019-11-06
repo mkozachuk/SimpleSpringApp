@@ -26,6 +26,8 @@ public class Computer {
     @Override
     public String toString() {
         return "Computer id: " + id +
-                "\n" + "Playing random song: " + musicPlayer.playMusicList(MusicGenre.CLASSIC);   //change genre here
+                "\n" + "Playing random song: " + musicPlayer.playMusicList(MusicGenre.CLASSIC) +
+                "\n" + "Using: " + musicPlayer.getPlayerName()+
+                "\n" + "Actual volume: " + musicPlayer.getVolume();   //change genre here
     }
 }

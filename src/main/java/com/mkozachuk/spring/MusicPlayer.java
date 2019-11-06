@@ -1,6 +1,7 @@
 package com.mkozachuk.spring;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -22,25 +23,22 @@ public class MusicPlayer {
         this.popMusic = popMusic;
     }
 
-
+    @Value("${musicPlayer.playerName}")
     private String playerName;
+
+    @Value("${musicPlayer.volume}")
     private int volume;
+
 
     public String getPlayerName() {
         return playerName;
     }
 
-    public void setPlayerName(String playerName) {
-        this.playerName = playerName;
-    }
 
     public int getVolume() {
         return volume;
     }
 
-    public void setVolume(int volume) {
-        this.volume = volume;
-    }
 
     //IoC
 //    public MusicPlayer(Music music){
