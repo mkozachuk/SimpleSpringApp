@@ -11,15 +11,21 @@ public class Computer {
     private MusicPlayer musicPlayer;
     private Random randomInt = new Random();
 
+
+
     @Autowired
     public Computer(MusicPlayer musicPlayer) {
         this.id = randomInt.nextInt(100);
         this.musicPlayer = musicPlayer;
     }
 
+    public int getId() {
+        return id;
+    }
+
     @Override
     public String toString() {
         return "Computer id: " + id +
-                "\n" + "Today's Playlist: " + musicPlayer.playMusicList();
+                "\n" + "Playing random song: " + musicPlayer.playMusicList(MusicGenre.CLASSIC);   //change genre here
     }
 }

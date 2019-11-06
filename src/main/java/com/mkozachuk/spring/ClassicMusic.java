@@ -4,9 +4,20 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import java.util.ArrayList;
+import java.util.List;
 
 @Component
 public class ClassicMusic implements Music {
+
+    List<String> classicMusicPlayList = new ArrayList<>();
+
+    {
+      classicMusicPlayList.add("Classic Song1");
+      classicMusicPlayList.add("Classic Song2");
+      classicMusicPlayList.add("Classic Song3");
+
+    }
 
     private ClassicMusic(){
 
@@ -26,7 +37,7 @@ public class ClassicMusic implements Music {
     }
 
     @Override
-    public String getSong() {
-        return "Symphony No.5";
+    public List<String> getSongs() {
+        return classicMusicPlayList;
     }
 }
