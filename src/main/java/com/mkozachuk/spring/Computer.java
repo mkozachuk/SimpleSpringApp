@@ -1,11 +1,8 @@
 package com.mkozachuk.spring;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
 import java.util.Random;
 
-@Component
+
 public class Computer {
     private int id;
     private MusicPlayer musicPlayer;
@@ -13,7 +10,7 @@ public class Computer {
 
 
 
-    @Autowired
+
     public Computer(MusicPlayer musicPlayer) {
         this.id = randomInt.nextInt(100);
         this.musicPlayer = musicPlayer;
@@ -26,8 +23,8 @@ public class Computer {
     @Override
     public String toString() {
         return "Computer id: " + id +
-                "\n" + "Playing random song: " + musicPlayer.playMusicList(MusicGenre.CLASSIC) +
+                "\n" + "Playing random playlist: " + musicPlayer.playMusicList() +
                 "\n" + "Using: " + musicPlayer.getPlayerName()+
-                "\n" + "Actual volume: " + musicPlayer.getVolume();   //change genre here
+                "\n" + "Actual volume: " + musicPlayer.getVolume();
     }
 }

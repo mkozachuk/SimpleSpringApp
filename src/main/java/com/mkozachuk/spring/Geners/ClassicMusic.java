@@ -1,13 +1,13 @@
-package com.mkozachuk.spring;
+package com.mkozachuk.spring.Geners;
 
-import org.springframework.stereotype.Component;
+import com.mkozachuk.spring.Music;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+
 public class ClassicMusic implements Music {
 
     List<String> classicMusicPlayList = new ArrayList<>();
@@ -19,13 +19,6 @@ public class ClassicMusic implements Music {
 
     }
 
-    private ClassicMusic(){
-
-    }
-
-    public static ClassicMusic factoryMethod(){
-        return new ClassicMusic();
-    }
 
 @PostConstruct
     public void initMethod(){

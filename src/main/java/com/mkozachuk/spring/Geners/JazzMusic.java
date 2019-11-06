@@ -1,11 +1,11 @@
-package com.mkozachuk.spring;
+package com.mkozachuk.spring.Geners;
 
-import org.springframework.stereotype.Component;
+import com.mkozachuk.spring.Music;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+
 public class JazzMusic implements Music {
 
     List<String> jazzMusicPlayList = new ArrayList<>();
