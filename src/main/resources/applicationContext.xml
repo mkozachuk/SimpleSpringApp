@@ -7,6 +7,8 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:property-placeholder location="classpath:musicPlayer.properties"/>
+
 
     <bean id="musicBean"
           class="com.mkozachuk.spring.RockMusic">
@@ -16,8 +18,8 @@
             class = "com.mkozachuk.spring.MusicPlayer">
             <constructor-arg ref="musicBean"/>
         
-        <property name="playerName" value="Winamp Reborn" />
-        <property name="volume" value="70"/>
+        <property name="playerName" value="${musicPlayer.playerName}" />
+        <property name="volume" value="${musicPlayer.volume}"/>
     </bean>
 
 </beans>
